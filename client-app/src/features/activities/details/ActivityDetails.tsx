@@ -1,16 +1,7 @@
-import {
-  Button,
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardMeta,
-  Grid,
-  Image,
-} from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 import { useStore } from "../../../app/stores/store";
 import LoadingComponent from "../../../app/layout/LoadingComponent";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import ActivityDetailedHeader from "./ActivityDetailedHeader";
@@ -36,8 +27,8 @@ function ActivityDetails() {
   return (
     <Grid>
       <Grid.Column width={10}>
-        <ActivityDetailedHeader />
-        <ActivityDetailedInfo />
+        <ActivityDetailedHeader activity={activity} />
+        <ActivityDetailedInfo activity={activity} />
         <ActivityDetailedChat />
       </Grid.Column>
       <Grid.Column width={6}>
